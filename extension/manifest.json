@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "PhishGuard AI Protector",
+  "version": "1.0.0",
+  "description": "Real-time AI phishing detection.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon.png"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PhishGuard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { width: 350px; background-color: #0a0a0f; color: #f0f0f5; }
+  </style>
+</head>
+<body class="p-6">
+  <div class="flex items-center gap-2 mb-6 border-b border-gray-800 pb-4">
+    <div class="text-blue-500 font-bold text-xl tracking-tight">PhishGuard AI</div>
+  </div>
+
+  <div id="loading" class="text-center text-gray-500 py-4">
+    Analyzing current page...
+  </div>
+
+  <div id="result" class="hidden space-y-4">
+    <div id="status-box" class="p-4 rounded-xl border flex flex-col items-center justify-center gap-2">
+      <div id="icon" class="text-4xl"></div>
+      <h2 id="risk-level" class="text-2xl font-bold"></h2>
+    </div>
+
+    <div class="bg-gray-900 rounded-lg p-4 border border-gray-800">
+      <div class="flex justify-between items-center mb-2">
+        <span class="text-gray-400 text-sm">Threat Score</span>
+        <span id="score" class="font-mono font-bold text-lg"></span>
+      </div>
+      <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
+        <div id="score-bar" class="h-full"></div>
+      </div>
+    </div>
+    
+    <div id="warning-message" class="hidden text-sm bg-red-500/10 border border-red-500/30 text-red-400 p-3 rounded-lg mt-4">
+      ⚠ Warning: This site has suspicious indicators resembling a phishing attack.
+    </div>
+    
+    <button id="full-scan-btn" class="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+      Run Deep Scan
+    </button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
