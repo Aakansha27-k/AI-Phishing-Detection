@@ -11,3 +11,4 @@ requests
 python-whois
 playwright
 python-dotenv
+pydantic-settings
